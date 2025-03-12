@@ -1,0 +1,66 @@
+@keyframes flip-scale {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(0.8);
+    }    
+    100%{
+        transform: scale(1);
+    }
+}
+
+.logo {
+    height: 9vh;
+    animation: flip-scale 3s linear infinite; 
+    transform-style: preserve-3d;
+}
+
+@keyframes glow {
+    0% {
+        box-shadow: 0 0 5px rgba(19, 19, 19, 0.5);
+    }
+    50% {
+        box-shadow: 0 0 20px rgba(19, 21, 22, 0.9); 
+    }
+    100% {
+        box-shadow: 0 0 5px rgba(75, 75, 75, 0.5); 
+    }
+}
+
+.shadow-glow {
+    animation: glow 1.5s infinite alternate ease-in-out;
+}
+
+nav {
+    background-size: contain!important; 
+    height: 10vh!important; 
+}
+
+.logo {
+    height: 9vh!important; 
+    width: auto; 
+}
+
+@media (max-width: 450px) {
+    .logo {
+        height: 7vh!important;
+    }
+}
+
+@keyframes social-icon {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(0.8);
+    }    
+    100%{
+        transform: scale(1);
+    }
+}
+
+.social-icon{
+    animation: flip-scale 1s linear infinite; 
+    transform-style: preserve-3d;
+}
