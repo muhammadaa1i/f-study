@@ -8,6 +8,8 @@ import navbg from '../../images/navbarbg.png'
 import tglogo from '../../images/tglogo.webp'
 import whlogo from '../../images/whlogo.png'
 import axios from 'axios'
+import { toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 const Layout = () => {
     const [isOpen, setIsOpen] = useState(false);
@@ -53,31 +55,42 @@ const Layout = () => {
     }
 
     const [loading, setLoading] = useState(false)
-    const SendMessage = (e) => {
-        setLoading(true)
-        e.PreventDefault()
-        const token = ''
-        const chat_id = -1002495783867
-        const url = `https://api.telegram.org/bot${token}/sendMessage`
+
+    const SendMessage = async (e) => {
+        e.preventDefault();
+        setLoading(true);
+
+        const token = '8004033263:AAFtUvkT8IPvuOG_dYeACDM91FwJlnQyCcs';
+        const chat_id = '-1002495783867';
+        const url = `https://api.telegram.org/bot${token}/sendMessage`;
+
         const name = document.getElementById('name').value;
         const telephone = document.getElementById('telephone').value;
-        const messageContent = `Ismi: ${name} \nTelefon raqami: ${telephone}`
+        const messageContent = `Ismi: ${name} \nTelefon raqami: ${telephone}`;
 
-        axios({
-            url: url,
-            method: 'POST',
-            data: {
-                "chat_id": chat_id,
-                "text": messageContent,
+        try {
+            const res = await axios.post(url, {
+                chat_id: chat_id,
+                text: messageContent,
+            }, {
+                headers: {
+                    'Content-Type': 'application/json'
+                }
+            })
+
+            if (res.status === 200 && res.data.ok) {
+                document.getElementById('myForm').reset()
+                setPhone("")
+                toast.success('Muvaffaqiyatli yuborildi!')
+            } else {
+                toast.error('Xabar yuborilmadi, qayta urinib ko‘ring.')
             }
-        }).then((res) => {
-            document.getElementById('myForm').reset();
-            alert('muvaffaqiyatli!')
-        }).catch((error) => {
-            console.log('yuborishda xato', error);
-        }).finally(() => {
+        } catch (error) {
+            console.error('Yuborishda xato:', error)
+            toast.error('Xabar yuborishda xatolik yuz berdi.')
+        } finally {
             setLoading(false)
-        })
+        }
     }
 
     return (
@@ -183,6 +196,12 @@ const Layout = () => {
                                     <div className={`underline absolute left-3 sm:left-0 bottom-[-6px] max-sm:left-0 ${isOpen ? 'w-[160px]' : 'w-0'} ${isOpen ? 'sm:w-[200px]' : 'w-0'} h-[2px] bg-[#004D91] transition-all duration-[1000ms] ease-in-out`}></div>
                                 )}
                                 {pathname === '/kultur' && (
+                                    <div className={`underline absolute left-3 sm:left-0 bottom-[-6px] max-sm:left-0 ${isOpen ? 'w-[160px]' : 'w-0'} ${isOpen ? 'sm:w-[200px]' : 'w-0'} h-[2px] bg-[#004D91] transition-all duration-[1000ms] ease-in-out`}></div>
+                                )}
+                                {pathname === '/arel' && (
+                                    <div className={`underline absolute left-3 sm:left-0 bottom-[-6px] max-sm:left-0 ${isOpen ? 'w-[160px]' : 'w-0'} ${isOpen ? 'sm:w-[200px]' : 'w-0'} h-[2px] bg-[#004D91] transition-all duration-[1000ms] ease-in-out`}></div>
+                                )}
+                                {pathname === '/topkapi' && (
                                     <div className={`underline absolute left-3 sm:left-0 bottom-[-6px] max-sm:left-0 ${isOpen ? 'w-[160px]' : 'w-0'} ${isOpen ? 'sm:w-[200px]' : 'w-0'} h-[2px] bg-[#004D91] transition-all duration-[1000ms] ease-in-out`}></div>
                                 )}
                             </li>

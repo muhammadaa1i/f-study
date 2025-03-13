@@ -11,10 +11,14 @@ import Beykent from './pages/Universities/Beykent'
 import Uskudar from './pages/Universities/Uskudar'
 import Medipol from './pages/Universities/Medipol'
 import Kultur from './pages/Universities/Kultur'
+import Arel from './pages/Universities/Arel'
+import { ToastContainer } from 'react-toastify'
+import Topkapi from './pages/Universities/Topkapi'
 
 const App = () => {
   return (
     <BrowserRouter>
+      <ToastContainer position="top-center" autoClose={3000} />
       <Routes>
         <Route path='/' element={<Layout />}>
           <Route index element={<Home />} />
@@ -27,6 +31,8 @@ const App = () => {
           <Route path='uskudar' element={<Uskudar />} />
           <Route path='medipol' element={<Medipol />} />
           <Route path='kultur' element={<Kultur />} />
+          <Route path='arel' element={<Arel />} />
+          <Route path='topkapi' element={<Topkapi />} />
         </Route>
       </Routes>
     </BrowserRouter>

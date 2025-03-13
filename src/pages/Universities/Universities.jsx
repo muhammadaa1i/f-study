@@ -9,6 +9,8 @@ import beykentlogo from '../../images/beykentlogo.jpg'
 import uskudarlogo from '../../images/uskudarlogo.png'
 import medipollogo from '../../images/medipollogo.jfif'
 import kulturlogo from '../../images/kulturlogo.png'
+import arellogo from '../../images/arellogo.png'
+import topkapilogo from '../../images/topkapilogo.webp'
 
 const Universities = () => {
     useEffect(() => {
@@ -107,6 +109,22 @@ const Universities = () => {
                     <img
                         className='max-w-[170px] w-full h-full mx-auto mb-[20px]'
                         src={kulturlogo}
+                        alt="Istanbul Kent University" />
+                    <div className='max-w-[450px] w-full h-auto py-2 text-center rounded-2xl text-[18px] text-white bg-[#004D91] mt-[-20px] px-2 '>Universitet haqida ma'lumot olish</div>
+                </Link>
+
+                <Link to='/arel' className='px-4 flex flex-col items-center justify-center border-2 border-[#004D91] rounded-xl max-w-[350px] m-auto w-full h-auto py-5'>
+                    <img
+                        className='max-w-[150px] w-full h-auto mx-auto mb-[50px]'
+                        src={arellogo}
+                        alt="Istanbul Kent University" />
+                    <div className='max-w-[450px] w-full h-auto py-2 text-center rounded-2xl text-[18px] text-white bg-[#004D91] mt-[-20px] px-2 '>Universitet haqida ma'lumot olish</div>
+                </Link>
+
+                <Link to='/topkapi' className='px-4 flex flex-col items-center justify-center border-2 border-[#004D91] rounded-xl max-w-[350px] m-auto w-full h-auto py-5'>
+                    <img
+                        className='max-w-[150px] w-full h-auto mx-auto mb-[40px]'
+                        src={topkapilogo}
                         alt="Istanbul Kent University" />
                     <div className='max-w-[450px] w-full h-auto py-2 text-center rounded-2xl text-[18px] text-white bg-[#004D91] mt-[-20px] px-2 '>Universitet haqida ma'lumot olish</div>
                 </Link>
