@@ -10,6 +10,7 @@ import whlogo from '../../images/whlogo.png'
 import axios from 'axios'
 import { toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
+import { useTranslation } from 'react-i18next'
 
 const Layout = () => {
     const [isOpen, setIsOpen] = useState(false);
@@ -93,6 +94,13 @@ const Layout = () => {
         }
     }
 
+    const { t, i18n } = useTranslation()
+    const ChangeLng = (e) => {
+        const selectedLanguage = e.target.value
+        i18n.changeLanguage(selectedLanguage)
+    }
+    const language = localStorage.getItem('i18nextLng')
+
     return (
         <>
             <header className='header h-[10vh]'>
@@ -121,26 +129,44 @@ const Layout = () => {
                     <section className='menu hidden md:block'>
                         <ul className='nav-links flex flex-row items-center text-[#004D91] justify-center gap-6 mr-12'>
                             <li>
-                                <Link className="no-underline text-[18px] font-normal transition-transform duration-300 hover:translate-2" to="/">Bosh sahifa</Link>
+                                <Link className="no-underline text-[18px] font-normal transition-transform duration-300 hover:translate-2" to="/">{t('Bosh sahifa')}</Link>
                             </li>
                             <li>
-                                <Link className="no-underline text-[18px] lg:text-xl font-normal" to="/programs">Dasturlar</Link>
+                                <Link className="no-underline text-[18px] lg:text-xl font-normal" to="/programs">{t('Dasturlar')}</Link>
                             </li>
                             <li>
-                                <Link className="no-underline text-[18px] font-normal" to="/universities">Universitetlar</Link>
+                                <Link className="no-underline text-[18px] font-normal" to="/universities">{t('Universitetlar')}</Link>
                             </li>
                             <li>
-                                <Link className="no-underline text-[18px] font-normal" to="/services">Xizmatlar</Link>
+                                <Link className="no-underline text-[18px] font-normal" to="/services">{t('Xizmatlar')}</Link>
                             </li>
                             <li>
-                                <Link className="no-underline text-[18px] font-normal" to="/turkey">Turkiya</Link>
+                                <Link className="no-underline text-[18px] font-normal" to="/turkey">{t('Turkiya')}</Link>
                             </li>
+                            <select
+                                onChange={ChangeLng}
+                                value={language}
+                                className='languasges outline-none border-2 text-white p-1 bg-[#004D91] '>
+                                <option value="uz">UZB</option>
+                                <option value="ru">RUS</option>
+                                <option value="en">ENG</option>
+                                <option value="tu">TUR</option>
+                            </select>
                         </ul>
                     </section>
 
                     <section className={`mobile-menu fixed top-0 right-0 h-full w-[50%] max-[500px]:w-[60%] max-[400px]:w-[75%] bg-gray-50 shadow-lg transform md:hidden ${isOpen ? "translate-x-0" : "translate-x-full"} z-50 transition-transform duration-500 ease-in-out `}>
                         <div className="w-auto h-auto flex flex-row justify-between items-center p-3">
                             <button onClick={() => setIsOpen(false)} className="fa-solid fa-x text-2xl max-sm:text-lg"></button>
+                            <select
+                                onChange={ChangeLng}
+                                value={language}
+                                className='languasges outline-none border-2 text-white p-1 bg-[#004D91] '>
+                                <option value="uz">UZB</option>
+                                <option value="ru">RUS</option>
+                                <option value="en">ENG</option>
+                                <option value="tu">TUR</option>
+                            </select>
                         </div>
                         <ul className="flex flex-col gap-4 text-2xl mt-8 ml-8 max-w-[500px]:ml-8 max-sm:text-lg text-start">
                             <li className={`relative flex flex-row gap-2 items-center`}>
@@ -150,7 +176,7 @@ const Layout = () => {
                                 }}>
                                     <i className="fa-solid fa-users"></i>
                                     <p>
-                                        Biz haqimizda
+                                        {t ('Biz haqimizda')}
                                     </p>
                                 </Link>
                                 {pathname === '/' && (
