@@ -11,6 +11,12 @@ import medipollogo from '../../images/medipollogo.jfif'
 import kulturlogo from '../../images/kulturlogo.png'
 import arellogo from '../../images/arellogo.png'
 import topkapilogo from '../../images/topkapilogo.webp'
+import haliclogo from '../../images/haliclogo.png'
+import birunilogo from '../../images/birunilogo.jpg'
+import nisantasilogo from '../../images/nisantasilogo.png'
+import istinyelogo from '../../images/istinyelogo.webp'
+import ozyeginlogo from '../../images/ozyeginlogo.webp'
+import fatihlogo from '../../images/fatihlogo.jpg'
 
 const Universities = () => {
     useEffect(() => {
@@ -125,6 +131,54 @@ const Universities = () => {
                     <img
                         className='max-w-[150px] w-full h-auto mx-auto mb-[40px]'
                         src={topkapilogo}
+                        alt="Istanbul Kent University" />
+                    <div className='max-w-[450px] w-full h-auto py-2 text-center rounded-2xl text-[18px] text-white bg-[#004D91] mt-[-20px] px-2 '>Universitet haqida ma'lumot olish</div>
+                </Link>
+
+                <Link to='/halic' className='px-4 flex flex-col items-center justify-center border-2 border-[#004D91] rounded-xl max-w-[350px] m-auto w-full h-auto py-5'>
+                    <img
+                        className='max-w-[120px] w-full h-auto mx-auto mb-[40px]'
+                        src={haliclogo}
+                        alt="Istanbul Kent University" />
+                    <div className='max-w-[450px] w-full h-auto py-2 text-center rounded-2xl text-[18px] text-white bg-[#004D91] mt-[-20px] px-2 '>Universitet haqida ma'lumot olish</div>
+                </Link>
+
+                <Link to='/biruni' className='px-4 flex flex-col items-center justify-center border-2 border-[#004D91] rounded-xl max-w-[350px] m-auto w-full h-auto py-5'>
+                    <img
+                        className='max-w-[200px] w-full h-auto mx-auto mb-[30px]'
+                        src={birunilogo}
+                        alt="Istanbul Kent University" />
+                    <div className='max-w-[450px] w-full h-auto py-2 text-center rounded-2xl text-[18px] text-white bg-[#004D91] mt-[-20px] px-2 '>Universitet haqida ma'lumot olish</div>
+                </Link>
+
+                <Link to='/nisantasi' className='px-4 flex flex-col items-center justify-center border-2 border-[#004D91] rounded-xl max-w-[350px] m-auto w-full h-auto py-5'>
+                    <img
+                        className='max-w-[350px] w-full h-auto mx-auto mb-[30px]'
+                        src={nisantasilogo}
+                        alt="Istanbul Kent University" />
+                    <div className='max-w-[450px] w-full h-auto py-2 text-center rounded-2xl text-[18px] text-white bg-[#004D91] mt-[-20px] px-2 '>Universitet haqida ma'lumot olish</div>
+                </Link>
+
+                <Link to='/istinye' className='px-4 flex flex-col items-center justify-center border-2 border-[#004D91] rounded-xl max-w-[350px] m-auto w-full h-auto py-5'>
+                    <img
+                        className='max-w-[350px] w-full h-auto mx-auto mt-[-20px]'
+                        src={istinyelogo}
+                        alt="Istanbul Kent University" />
+                    <div className='max-w-[450px] w-full h-auto py-2 text-center rounded-2xl text-[18px] text-white bg-[#004D91] mt-[-20px] px-2 '>Universitet haqida ma'lumot olish</div>
+                </Link>
+
+                <Link to='/ozyegin' className='px-4 flex flex-col items-center justify-center border-2 border-[#004D91] rounded-xl max-w-[350px] m-auto w-full h-auto py-5'>
+                    <img
+                        className='max-w-[350px] w-full h-auto mx-auto mt-[-20px]'
+                        src={ozyeginlogo}
+                        alt="Istanbul Kent University" />
+                    <div className='max-w-[450px] w-full h-auto py-2 text-center rounded-2xl text-[18px] text-white bg-[#004D91] mt-[-20px] px-2 '>Universitet haqida ma'lumot olish</div>
+                </Link>
+
+                <Link to='/fatih' className='px-4 flex flex-col items-center justify-center border-2 border-[#004D91] rounded-xl max-w-[350px] m-auto w-full h-auto py-5'>
+                    <img
+                        className='max-w-[350px] w-full h-auto mx-auto mt-[-20px]'
+                        src={fatihlogo}
                         alt="Istanbul Kent University" />
                     <div className='max-w-[450px] w-full h-auto py-2 text-center rounded-2xl text-[18px] text-white bg-[#004D91] mt-[-20px] px-2 '>Universitet haqida ma'lumot olish</div>
                 </Link>

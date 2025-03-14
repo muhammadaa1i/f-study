@@ -6,7 +6,6 @@ import uskudar2 from '../../images/uskudar2.jfif'
 import uskudar3 from '../../images/uskudar3.jfif'
 
 const Uskudar = () => {
-
     useEffect(() => {
         Aos.init({ duration: 800 })
     }, [])
@@ -111,7 +110,7 @@ const Uskudar = () => {
                     <h1
                         data-aos="fade-right"
                         className="font-medium lg:max-w-[700px] lg:text-[20px]">
-                        Turkiyaning <strong>nevrologiya, psixologiya, sog‘liqni saqlash va muhandislik</strong> sohalariga ixtisoslashgan yetakchi universitetlaridan biridir. 2011-yilda tashkil etilgan bo‘lib, qisqa vaqt ichida Turkiyaning eng nufuzli ta’lim muassasalaridan biriga aylandi. NP İstanbul Neyropsixiatriya shifoxonasi bilan hamkorlik qilgani sababli, ayniqsa, sog‘liqni saqlash va psixologiya bo‘yicha kuchli amaliyot bazasiga ega.
+                        Turkiyaning <strong>nevrologiya, psixologiya, sog‘liqni saqlash va muhandislik</strong> sohalariga ixtisoslashgan yetakchi universitetlaridan biri. 2011-yilda tashkil etilgan bo‘lib, qisqa vaqt ichida Turkiyaning eng nufuzli ta’lim muassasalaridan biriga aylandi. NP İstanbul Neyropsixiatriya shifoxonasi bilan hamkorlik qilgani sababli, ayniqsa, sog‘liqni saqlash va psixologiya bo‘yicha kuchli amaliyot bazasiga ega.
                         <br />
                         <br />
                         Üsküdar Universiteti nazariy bilim va amaliyot uyg‘unligi, innovatsion tadqiqot markazlari va kuchli xalqaro aloqalari bilan ajralib turadi. Universitet ilmiy izlanishlar va sog‘liqni saqlash sohalarida yuqori darajadagi mutaxassislar tayyorlashga yo‘naltirilgan.
@@ -143,14 +142,14 @@ const Uskudar = () => {
                     <h1
                         data-aos="fade-right"
                         className="leading-relaxed font-medium lg:max-w-[700px] lg:text-[20px]">
-                        <strong> NP Istanbul Neyropsixiatriya shifoxonasi bilan amaliyot imkoniyatlari:</strong>
+                        <strong>NP Istanbul Neyropsixiatriya shifoxonasi bilan amaliyot imkoniyatlari:</strong>
                         <br />
                         – Talabalar real klinik sharoitda tajriba orttirish imkoniga ega.
                     </h1>
                     <h1
                         data-aos="fade-right"
                         className="leading-relaxed font-medium lg:max-w-[700px] lg:text-[20px]">
-                        <strong>Amaliyot va tadqiqot imkoniyatlari yuqori :</strong>
+                        <strong>Amaliyot va tadqiqot imkoniyatlari yuqori:</strong>
                         <br />
                         – Universitetning ilmiy laboratoriyalari dunyo standartlariga javob beradi.
                     </h1>
@@ -175,7 +174,7 @@ const Uskudar = () => {
                     </img>
                 </section>
 
-                <section className="flex flex-col items-start mt-8">
+                <section className="flex flex-col mt-8">
                     <div
                         data-aos="fade-right"
                         className="bg-[#004D91] h-[2px] w-[100%] m-auto rounded-lg"></div>

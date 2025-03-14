@@ -139,8 +139,35 @@ const Beykent = () => {
                             Istanbul Beykent universiteti ilg'or ta'lim infratuzilmasi va keng qamrovli o'quv dasturlari bilan o'z talabalariga zamonaviy ta'lim muhitini taklif etadi. Mutaxassis akademik xodimlarimiz, innovatsion tadqiqot imkoniyatlari va xalqaro hamkorlik tufayli talabalarimiz nazariy bilimlarni ham, amaliy dasturlarni ham eng yaxshi tarzda o'rganadilar. Keng qamrovli stipendiya imkoniyatlari, dinamik kampus hayoti va sohaviy aloqalar bizning talabalarimizga martaba maqsadlariga erishishda kuchli yordam beradi.
                         </h1>
                     </span>
-
                 </section>
+
+                <span
+                    data-aos="zoom-in"
+                    className='specify2 w-full h-full flex flex-col gap-4 border-2 border-[#004D91] rounded-3xl mt-4 p-4 mb-3'>
+                    <h1 className='font-bold text-center'>
+                        E’tibor bering! Future Study orqali siz:
+                    </h1>
+
+                    <span className='flex flex-col gap-5'>
+
+                        <span className='mt-[-8px] font-medium'>
+                            <h1 className='mb-3'>
+                                Hech qanday imtihon topshirmasdan o‘qishga kira olasiz!
+                            </h1>
+                            <h1>
+                                Hech qanday til sertifikatlari talab qilinmaydi! (IELTS yoki TOEFL kerak emas)
+                            </h1>
+                            <h1>
+                                Firma to‘lovisiz qabul qilinasiz!
+                            </h1>
+                            <h1>
+                                Va eng muhimi – 71% chegirmani qo‘lga kiritish imkoniyatiga egasiz!
+                            </h1>
+                        </span>
+
+                    </span>
+
+                </span>
 
             </div>
 

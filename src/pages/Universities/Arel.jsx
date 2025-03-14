@@ -170,7 +170,7 @@ const Arel = () => {
                     </h1>
                 </section>
 
-                <section className="flex flex-col items-start mt-8">
+                <section className="flex flex-col mt-8">
                     <div
                         data-aos="fade-right"
                         className="bg-[#004D91] h-[2px] w-[100%] m-auto rounded-lg"></div>

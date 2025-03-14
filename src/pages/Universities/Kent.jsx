@@ -341,8 +341,8 @@ const Kent = () => {
                             data-aos='zoom-in'
                             className='max-w-[550px] w-full max-h-[400px] h-full mb-10'>
                             <iframe
-                                className='m-auto max-[550px]:m-auto h-[450px] w-[250px] mr-2 rounded-2xl shadow-2xl'
-                                src="https://www.youtube.com/embed/_9i0gCVH7Yw"
+                                className='m-auto max-[550px]:m-auto h-[440px] w-[250px] mr-2 rounded-2xl shadow-2xl'
+                                src="https://www.youtube.com/embed/wYH7neR8IRk"
                                 frameborder="0"
                                 allowFullScreen
                             >

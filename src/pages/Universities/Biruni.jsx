@@ -1,19 +1,17 @@
 import Aos from 'aos'
 import React, { useEffect, useState } from 'react'
-import topkapibg from '../../images/topkapibg.webp'
 import { TypeAnimation } from 'react-type-animation'
-import topkapi2 from '../../images/topkapi2.jpg'
-import topkapi3 from '../../images/topkapi3.jpg'
+import birunibg from '../../images/birunibg.jpg'
+import biruni2 from '../../images/biruni2.jfif'
 
-const Topkapi = () => {
-
+const Biruni = () => {
     useEffect(() => {
         Aos.init({ duration: 800 })
     }, [])
 
     useEffect(() => {
         const img = new Image();
-        img.src = topkapibg;
+        img.src = birunibg;
         img.onload = () => {
             setIsImageLoaded(true);
         }
@@ -42,7 +40,7 @@ const Topkapi = () => {
             <div
                 className='hero w-[100vw] h-[60vh] flex justify-evenly flex-col items-center'
                 style={{
-                    backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.623), rgba(0, 0, 0, 0.712)), url(${topkapibg})`,
+                    backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.623), rgba(0, 0, 0, 0.712)), url(${birunibg})`,
                     backgroundRepeat: "no-repeat",
                     backgroundSize: "cover",
                     backgroundPosition: "center"
@@ -50,7 +48,7 @@ const Topkapi = () => {
                 <h1 className='main-text w-full max-w-[400px] text-xl md:max-w-[700px] md:text-3xl lg:max-w-[1000px] lg:text-4xl lg:px-5 lg:py-4 xl:text-5xl text-center text-white uppercase font-semibold px-4 py-3 rounded-2xl'>
                     <TypeAnimation
                         sequence={[
-                            "Istanbul Topkapi universiteti",
+                            "Istanbul Biruni universiteti",
                         ]}
                         speed={50}
                         cursor={false}
@@ -83,7 +81,7 @@ const Topkapi = () => {
                     data-aos='zoom-in'
                     className='flex flex-col items-center justify-center gap-2'>
                     <i class="fa-solid fa-house text-3xl"></i>
-                    <p>7</p>
+                    <p>1</p>
                     <h2 className='mt-[-6px] text-center'>Kampuslar soni</h2>
                 </span>
 
@@ -104,22 +102,22 @@ const Topkapi = () => {
                         className="bg-[#004D91] h-[2px] w-[100%] m-auto rounded-lg"></div>
                     <h1
                         data-aos="fade-right"
-                        className="text-2xl text-center md:text-3xl font-semibold uppercase">Istanbul Topkapi University – Zamonaviy Ta’lim Maskani</h1>
+                        className="text-2xl text-center md:text-3xl font-semibold uppercase">Istanbul Biruni University – Zamonaviy Ta’lim Maskani</h1>
                 </section>
 
                 <section className='flex flex-col gap-6 justify-between'>
                     <h1
                         data-aos="fade-right"
                         className="font-medium lg:max-w-[700px] lg:text-[20px]">
-                        Turkiyaning eng tez rivojlanayotgan oliy ta’lim muassasalaridan biri <strong>biznes, muhandislik, san’at va sog‘liqni saqlash</strong> sohalariga ixtisoslashgan yetakchi universitetlaridan biridir. 2011-yilda tashkil etilgan bo‘lib, qisqa vaqt ichida Turkiyaning eng nufuzli ta’lim muassasalaridan biriga aylandi. NP İstanbul Neyropsixiatriya shifoxonasi bilan hamkorlik qilgani sababli, ayniqsa, sog‘liqni saqlash va psixologiya bo‘yicha kuchli amaliyot bazasiga ega.
+                        Turkiyaning eng nufuzli va innovatsion oliy ta’lim muassasalaridan biri, ayniqsa <strong>tibbiyot, sog‘liqni saqlash va texnologiya</strong> yo‘nalishlarida yetakchi o‘rin tutadi. Universitet 2014-yilda tashkil etilgan bo‘lib, qisqa vaqt ichida ilmiy izlanishlar va yuqori sifatli ta’lim sohasi bo‘yicha kuchli natijalarga erishdi.
                         <br />
                         <br />
-                        Universitet xalqaro darajada tan olingan ta’lim tizimi, zamonaviy kampus sharoitlari va talabalar uchun keng imkoniyatlari bilan ajralib turadi. Agar siz Istanbulning nufuzli universitetlaridan birida sifatli ta’lim olishni istasangiz, Istanbul Topkapi Universiteti mukammal tanlov bo‘lishi mumkin.
+                        Biruni Universiteti zamonaviy infratuzilma, ilg‘or laboratoriyalar va o‘z klinikalari bilan mashhur bo‘lib, talabalarga amaliy tajriba olish imkoniyatini taqdim etadi. Bu esa universitet bitiruvchilarining ishga joylashish imkoniyatlarini keskin oshiradi.
                     </h1>
                     <img
                         data-aos="zoom-in"
-                        className='w-full h-full m-auto max-h-[350px] max-w-[400px] md:max-h-[350px] min-[900px]:max-w-[200px] rounded-2xl lg:mr-20 shadow-2xl'
-                        src={topkapi2}>
+                        className='w-full h-full m-auto max-h-[350px] max-w-[350px] md:max-h-[350px] min-[900px]:max-w-[200px] rounded-2xl lg:mr-20 shadow-2xl'
+                        src={biruni2}>
                     </img>
                 </section>
 
@@ -129,44 +127,44 @@ const Topkapi = () => {
                         className="bg-[#004D91] h-[2px] w-[100%] m-auto rounded-lg"></div>
                     <h1
                         data-aos="fade-right"
-                        className="text-2xl text-center md:text-3xl font-semibold uppercase">Nima Uchun Aynan Istanbul Topkapi Universiteti?</h1>
+                        className="text-2xl text-center md:text-3xl font-semibold uppercase">Nima Uchun Aynan Biruni Universiteti?</h1>
                 </section>
 
                 <section className='flex flex-col gap-2 justify-between mt-4'>
                     <h1
                         data-aos="fade-right"
                         className="leading-relaxed font-medium lg:max-w-[700px] lg:text-[20px]">
-                        <strong>Yevropa ta’lim standartlariga mos dasturlar</strong>
+                        <strong>Turkiyaning eng yaxshi tibbiyot universitetlaridan biri:</strong>
                         <br />
-                        – Universitet xalqaro ta’lim sifatiga javob beruvchi kuchli akademik dasturlarni taklif etadi.
+                        – Universitet sog‘liqni saqlash sohasida yetakchi oliy ta’lim muassasalari qatoriga kiradi.
                     </h1>
                     <h1
                         data-aos="fade-right"
                         className="leading-relaxed font-medium lg:max-w-[700px] lg:text-[20px]">
-                        <strong>Zamonaviy laboratoriyalar va kampuslar</strong>
+                        <strong>Zamonaviy laboratoriyalar va o‘quv sharoitlari:</strong>
                         <br />
-                        – Ilmiy izlanish va amaliy mashg‘ulotlar uchun eng ilg‘or texnologiyalar mavjud.
+                        – Talabalar eng yangi tibbiy texnologiyalar bilan jihozlangan klinikalarda o‘qiydilar.
                     </h1>
                     <h1
                         data-aos="fade-right"
                         className="leading-relaxed font-medium lg:max-w-[700px] lg:text-[20px]">
-                        <strong>Xalqaro talabalar uchun qulay sharoitlar</strong>
+                        <strong>Amaliyot va kasbiy rivojlanish:</strong>
                         <br />
-                        – Universitetda turli davlatlardan kelgan talabalar uchun mos muhit yaratilgan.
+                        – Talabalar Biruni Universitetiga qarashli shifoxonalarda real tajriba orttiradilar.
                     </h1>
                     <h1
                         data-aos="fade-right"
                         className="leading-relaxed font-medium lg:max-w-[700px] lg:text-[20px]">
-                        <strong>Ishga joylashish imkoniyatlari yuqori</strong>
+                        <strong>Xalqaro darajada tan olingan diploma:</strong>
                         <br />
-                        – Bitiruvchilar xalqaro kompaniyalarda ish topish imkoniyatiga ega.
+                        – Universitet bitiruvchilari Turkiya va xalqaro miqyosda ishlash imkoniyatiga ega bo‘ladilar.
                     </h1>
                     <h1
                         data-aos="fade-right"
                         className="leading-relaxed font-medium lg:max-w-[700px] lg:text-[20px]">
-                        <strong>Amaliyot va kasbiy rivojlanish</strong>
+                        <strong>Ishga joylashish darajasi yuqori:</strong>
                         <br />
-                        – Talabalar o‘qish davomida yetakchi kompaniyalarda amaliyot o‘tashlari mumkin.
+                        – Tibbiyot va sog‘liqni saqlash sohalari bo‘yicha bitiruvchilar ish topishda qiyinchilikka duch kelmaydilar.
                     </h1>
                 </section>
 
@@ -186,7 +184,7 @@ const Topkapi = () => {
                         className="mt-4 leading-relaxed flex flex-col gap-3 font-medium lg:max-w-[700px] lg:text-[20px]">
 
                         <h1 className='font-bold text-center'>
-                            Istanbul Topkapi Universitetida quyidagi asosiy sohalar bo‘yicha ta’lim olish mumkin:
+                            Istanbul Biruni Universiteti tibbiyot va sog‘liqni saqlash sohalariga ixtisoslashgan universitet bo‘lib, quyidagi fakultet va yo‘nalishlarni taklif etadi:
                         </h1>
 
                         <span className='specify w-full h-full flex flex-col gap-4 border-2 border-[#004D91] rounded-3xl p-4 mb-3'>
@@ -195,100 +193,100 @@ const Topkapi = () => {
 
                                 <span className='mt-[-8px] flex flex-col'>
                                     <h1 className='font-bold'>
-                                        1. Muhandislik va Texnologiya Fakulteti
+                                        1. Tibbiyot Fakulteti
                                     </h1>
                                     <h1>
-                                        • Kompyuter muhandisligi
+                                        • Umumiy tibbiyot
                                     </h1>
                                     <h1>
-                                        • Sun’iy intellekt va data tahlili
+                                        • Stomatologiya
                                     </h1>
                                     <h1>
-                                        • Elektronika va telekommunikatsiya muhandisligi
+                                        • Farmatsiya
                                     </h1>
                                     <h1>
-                                        • Biotexnologiya muhandisligi
+                                        • Jamoat salomatligi
+                                    </h1>
+                                    <h1>
+                                        • Tibbiyot biotexnologiyasi
                                     </h1>
                                 </span>
 
                                 <span className='mt-[-8px] flex flex-col'>
                                     <h1 className='font-bold'>
-                                        2. Iqtisodiyot va Menejment Fakulteti
-                                    </h1>
-                                    <h1>
-                                        • Xalqaro biznes va boshqaruv
-                                    </h1>
-                                    <h1>
-                                        • Bank ishi va moliya
-                                    </h1>
-                                    <h1>
-                                        • Marketing va innovatsiya
-                                    </h1>
-                                    <h1>
-                                        • Xalqaro savdo va logistika
-                                    </h1>
-                                </span>
-
-                                <span className='mt-[-8px] flex flex-col'>
-                                    <h1 className='font-bold'>
-                                        3. Dizayn va San’at Fakulteti
-                                    </h1>
-                                    <h1>
-                                        • Moda dizayni
-                                    </h1>
-                                    <h1>
-                                        • Grafika dizayni
-                                    </h1>
-                                    <h1>
-                                        • Kino va televideniye
-                                    </h1>
-                                    <h1>
-                                        • Vizual san’at
-                                    </h1>
-                                </span>
-
-                                <span className='mt-[-8px] flex flex-col'>
-                                    <h1 className='font-bold'>
-                                        4. Sog‘liqni Saqlash Fakulteti
+                                        2. Sog‘liqni Saqlash Fanlari Fakulteti
                                     </h1>
                                     <h1>
                                         • Hamshiralik ishi
                                     </h1>
                                     <h1>
-                                        • Farmatsiya va tibbiyot texnologiyalari
+                                        • Fizioterapiya va reabilitatsiya
                                     </h1>
                                     <h1>
-                                        • Diagnostika va reabilitatsiya
+                                        • Ortopedik protez va ortoz
+                                    </h1>
+                                    <h1>
+                                        • Diagnostika va radiologiya
                                     </h1>
                                 </span>
 
                                 <span className='mt-[-8px] flex flex-col'>
                                     <h1 className='font-bold'>
-                                        5. Ijtimoiy Fanlar Fakulteti
+                                        3. Farmatsiya Fakulteti
                                     </h1>
                                     <h1>
-                                        • Xalqaro munosabatlar
+                                        • Klinik farmatsiya
+                                    </h1>
+                                    <h1>
+                                        • Biotibbiyot va farmatsevtika ilmi
+                                    </h1>
+                                    <h1>
+                                        • Kosmetologiya va farmakologiya
+                                    </h1>
+                                </span>
+
+                                <span className='mt-[-8px] flex flex-col'>
+                                    <h1 className='font-bold'>
+                                        4. Muhandislik va Tabiiy Fanlar Fakulteti
+                                    </h1>
+                                    <h1>
+                                        • Biotibbiyot muhandisligi
+                                    </h1>
+                                    <h1>
+                                        • Kompyuter muhandisligi
+                                    </h1>
+                                    <h1>
+                                        • Sun’iy intellekt va tibbiyot axborot texnologiyalari
+                                    </h1>
+                                </span>
+
+                                <span className='mt-[-8px] flex flex-col'>
+                                    <h1 className='font-bold'>
+                                        5. Ta’lim Fakulteti
+                                    </h1>
+                                    <h1>
+                                        • Maxsus pedagogika
+                                    </h1>
+                                    <h1>
+                                        • Logopediya va nutq terapiyasi
+                                    </h1>
+                                    <h1>
+                                        • Psixologiya
+                                    </h1>
+                                </span>
+
+                                <span className='mt-[-8px] flex flex-col'>
+                                    <h1 className='font-bold'>
+                                        6. Ijtimoiy Fanlar Fakulteti
                                     </h1>
                                     <h1>
                                         • Psixologiya
                                     </h1>
                                     <h1>
-                                        • Media va kommunikatsiya
-                                    </h1>
-                                </span>
-
-                                <span className='mt-[-8px] flex flex-col'>
-                                    <h1 className='font-bold'>
-                                        6. Huquq Fakulteti
+                                        • Xalqaro munosabatlar
                                     </h1>
                                     <h1>
-                                        • Xalqaro huquq
-                                    </h1>
-                                    <h1>
-                                        • Biznes huquqi
-                                    </h1>
-                                    <h1>
-                                        • Inson huquqlari va yuridik tadqiqotlar
+                                        • Sotsiologiya
                                     </h1>
                                 </span>
 
@@ -299,12 +297,6 @@ const Topkapi = () => {
                     </span>
 
                 </section>
-
-                <img
-                    data-aos="zoom-in"
-                    className='w-full h-full m-auto mt-4 max-h-[350px] max-w-[400px] md:max-h-[350px] min-[900px]:max-w-[200px] rounded-2xl lg:mr-20 shadow-2xl'
-                    src={topkapi3}>
-                </img>
 
                 <section className="flex flex-col items-start mt-8">
                     <div
@@ -319,32 +311,32 @@ const Topkapi = () => {
                     <h1
                         data-aos="fade-right"
                         className="font-medium lg:max-w-[700px] lg:text-[20px] mt-4">
-                        <strong>Yangi va zamonaviy laboratoriyalar</strong> – Muhandislik va sog‘liqni saqlash yo‘nalishlari uchun ilg‘or jihozlar mavjud.
+                        <strong>Eng zamonaviy laboratoriyalar</strong> – Talabalar amaliy mashg‘ulotlarda eng yangi texnologiyalar bilan ishlash imkoniyatiga ega.
                     </h1>
                     <h1
                         data-aos="fade-right"
                         className="font-medium lg:max-w-[700px] lg:text-[20px]">
-                        <strong>Kutubxona va ilmiy markazlar</strong> – Talabalar uchun keng ilmiy resurslar taqdim etiladi.
+                        <strong>Universitet klinikasi</strong> – Tibbiyot va sog‘liqni saqlash bo‘yicha o‘qiyotgan talabalar universitet klinikalarida real sharoitda ishlashadi.
                     </h1>
                     <h1
                         data-aos="fade-right"
                         className="font-medium lg:max-w-[700px] lg:text-[20px]">
-                        <strong>Talaba yotoqxonalar</strong> – Xavfsiz va qulay yashash joylari.
+                        <strong>Kutubxona va ilmiy tadqiqot markazlari</strong> – Talabalarga zamonaviy adabiyotlar va ilmiy bazalar taqdim etiladi.
                     </h1>
                     <h1
                         data-aos="fade-right"
                         className="font-medium lg:max-w-[700px] lg:text-[20px]">
-                        <strong>Sport majmualari</strong> – Sport zal, futbol maydoni, basketbol va voleybol zallari.
+                        <strong>Yotoqxonalar</strong> – Xavfsiz va qulay yashash sharoitlari.
                     </h1>
                     <h1
                         data-aos="fade-right"
                         className="font-medium lg:max-w-[700px] lg:text-[20px]">
-                        <strong>Startup va innovatsiya markazlari</strong> – Talabalar o‘z biznes loyihalarini boshlash imkoniyatiga ega.
+                        <strong>Sport majmualari</strong> – Jismoniy faollikni oshirish uchun sport zallari va ochiq maydonlar mavjud.
                     </h1>
                     <h1
                         data-aos="fade-right"
                         className="font-medium lg:max-w-[700px] lg:text-[20px]">
-                        <strong>Talaba klublari va madaniy tadbirlar</strong> – Talabalar ijtimoiy hayotda faol ishtirok etishlari mumkin.
+                        <strong>Talaba klublari va madaniy tadbirlar</strong> – Talabalar o‘z qiziqishlariga mos klub va tashkilotlarga qo‘shilishlari mumkin.
                     </h1>
                 </section>
 
@@ -377,9 +369,8 @@ const Topkapi = () => {
                 </span>
 
             </div>
-
         </>
     )
 }
 
-export default Topkapi
+export default Biruni
