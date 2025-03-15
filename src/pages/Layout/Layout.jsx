@@ -168,7 +168,7 @@ const Layout = () => {
                                 <option value="tu">TUR</option>
                             </select>
                         </div>
-                        <ul className="flex flex-col gap-4 text-2xl mt-8 ml-8 max-w-[500px]:ml-8 max-sm:text-lg text-start">
+                        <ul className="flex flex-col pr-2 gap-4 text-2xl mt-8 ml-8 max-w-[500px]:ml-8 max-sm:text-lg text-start">
                             <li className={`relative flex flex-row gap-2 items-center`}>
                                 <Link className="text-[#004D91] no-underline flex flex-row items-center gap-1" to="/" onClick={() => {
                                     setIsOpen(false)
@@ -176,7 +176,7 @@ const Layout = () => {
                                 }}>
                                     <i className="fa-solid fa-users"></i>
                                     <p>
-                                        {t ('Biz haqimizda')}
+                                        {t('Biz haqimizda')}
                                     </p>
                                 </Link>
                                 {pathname === '/' && (
@@ -277,6 +277,34 @@ const Layout = () => {
                                     <div className={`underline absolute left-3 sm:left-0 bottom-[-6px] max-sm:left-0 ${isOpen ? 'w-[150px]' : 'w-0'} ${isOpen ? 'sm:w-[200px]' : 'w-0'} h-[2px] bg-[#004D91] transition-all duration-[1000ms] ease-in-out`}></div>
                                 )}
                             </li>
+                            <li className={`relative flex flex-row gap-2 items-center`}>
+                                <Link className="text-[#004D91] no-underline flex flex-row items-center gap-1 pl-0.5" to="/questions" onClick={() => {
+                                    setIsOpen(false)
+                                    window.scrollTo(0, 0)
+                                }}>
+                                    <i class="fa-solid fa-comments"></i>
+                                    <p>
+                                        {t("Ko'p beriladigan savollar")}
+                                    </p>
+                                </Link>
+                                {pathname === '/questions' && (
+                                    <div className={`underline absolute left-3 sm:left-0 bottom-[-6px] max-sm:left-0 ${isOpen ? 'w-[220px]' : 'w-0'} ${isOpen ? 'sm:w-[250px]' : 'w-0'} h-[2px] bg-[#004D91] transition-all duration-[1000ms] ease-in-out`}></div>
+                                )}
+                            </li>
+                            <li className={`relative flex flex-row gap-2 items-center`}>
+                                <Link className="text-[#004D91] no-underline flex flex-row items-center gap-1 pl-0.5" to="/partner" onClick={() => {
+                                    setIsOpen(false)
+                                    window.scrollTo(0, 0)
+                                }}>
+                                    <i class="fa-solid fa-handshake-simple"></i>
+                                    <p>
+                                        {t("Biz bilan hamkor bo'ling")}
+                                    </p>
+                                </Link>
+                                {pathname === '/partner' && (
+                                    <div className={`underline absolute left-3 sm:left-0 bottom-[-6px] max-sm:left-0 ${isOpen ? 'w-[220px]' : 'w-0'} ${isOpen ? 'sm:w-[250px]' : 'w-0'} h-[2px] bg-[#004D91] transition-all duration-[1000ms] ease-in-out`}></div>
+                                )}
+                            </li>
                         </ul>
                     </section>
 
@@ -287,10 +315,9 @@ const Layout = () => {
             {isOpen && (
                 <div
                     className="fixed top-0 left-0 w-full h-full bg-gray-800 opacity-50 z-10"
-                    onClick={() => setIsOpen(false)}
-                ></div>
-            )
-            }
+                    onClick={() => setIsOpen(false)}>
+                </div>
+            )}
 
             <a
                 href='https://t.me/futurestudyuz'

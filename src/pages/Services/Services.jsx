@@ -211,7 +211,7 @@ const Services = () => {
                         onClick={handleScroll}
                         href='#form'
                         className='text-white bg-[#004D91] w-[240px] h-12 rounded-xl gap-2 flex flex-row items-center  justify-center '>
-                        <h4 className='text-[18px]'>{t("Biz bilan bo'g'laning")}</h4>
+                        <h4 className='text-[18px]'>{t("Biz bilan bog'laning")}</h4>
                         <i class="fa-solid fa-headset text-[18px]"></i>
                     </a>
                 </section>

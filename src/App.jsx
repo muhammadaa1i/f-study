@@ -20,6 +20,8 @@ import Nisantasi from './pages/Universities/Nisantasi'
 import Istinye from './pages/Universities/Istinye'
 import Ozyegin from './pages/Universities/Ozyegin'
 import Fatih from './pages/Universities/Fatih'
+import Questions from './pages/Questions/Questions'
+import Partner from './pages/Partner/PArtner'
 
 const App = () => {
   return (
@@ -32,6 +34,8 @@ const App = () => {
           <Route path="universities" element={<Universities />} />
           <Route path="services" element={<Services />} />
           <Route path="turkey" element={<Turkey />} />
+          <Route path='questions' element={<Questions />} />
+          <Route path='partner' element={<Partner />} />
           <Route path="kent" element={<Kent />} />
           <Route path='beykent' element={<Beykent />} />
           <Route path='uskudar' element={<Uskudar />} />

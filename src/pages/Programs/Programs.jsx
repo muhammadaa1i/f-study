@@ -31,11 +31,11 @@ const Programs = () => {
             window.scrollTo({ top: y, behavior: "smooth" });
         }
     };
-     const { t, i18n } = useTranslation()
-        const ChangeLng = (e) => {
-            const selectedLanguage = e.target.value
-            i18n.changeLanguage(selectedLanguage)
-        }
+    const { t, i18n } = useTranslation()
+    const ChangeLng = (e) => {
+        const selectedLanguage = e.target.value
+        i18n.changeLanguage(selectedLanguage)
+    }
 
     return (
         <>
@@ -48,11 +48,11 @@ const Programs = () => {
                     backgroundPosition: "center"
                 }}>
                 <h1
-                data-aos='zoom-out-up' className='main-text w-full max-w-[400px] text-xl md:max-w-[700px] md:text-3xl lg:max-w-[1000px] lg:text-4xl lg:px-5 lg:py-4 xl:text-5xl text-center text-white uppercase font-semibold px-4 py-3 rounded-2xl'>
-                    
-                       
-                            {t("Universitetga tayyorlanish yili")}
-                    
+                    data-aos='zoom-out-up' className='main-text w-full max-w-[400px] text-xl md:max-w-[700px] md:text-3xl lg:max-w-[1000px] lg:text-4xl lg:px-5 lg:py-4 xl:text-5xl text-center text-white uppercase font-semibold px-4 py-3 rounded-2xl'>
+
+
+                    {t("Universitetga tayyorlanish yili")}
+
                 </h1>
                 <a
                     onClick={handleScroll}
@@ -116,7 +116,7 @@ const Programs = () => {
                     <h1
                         data-aos="zoom-in-up"
                         className="mt-4 leading-relaxed font-medium lg:max-w-[700px] lg:text-[20px]">
-                       {t("Oliy ta’lim muassasalari qabul jarayonida talabalarning ta’lim tillarini bilish darajasini tekshirish uchun til bilish imtihonlarini tashkil qiladi. Ushbu imtihonlar talabalarning akademik matnlarni tushunishi va samarali muloqot qilishini baholaydi. Noto'g'ri deb topilgan talabalar til ko'nikmalarini oshirish uchun tayyorgarlik dasturlariga yo'naltiriladi.")}
+                        {t("Oliy ta’lim muassasalari qabul jarayonida talabalarning ta’lim tillarini bilish darajasini tekshirish uchun til bilish imtihonlarini tashkil qiladi. Ushbu imtihonlar talabalarning akademik matnlarni tushunishi va samarali muloqot qilishini baholaydi. Noto'g'ri deb topilgan talabalar til ko'nikmalarini oshirish uchun tayyorgarlik dasturlariga yo'naltiriladi.")}
                     </h1>
                 </div>
 
@@ -160,12 +160,12 @@ const Programs = () => {
                     <h1
                         data-aos="zoom-out-up"
                         className="mt-4 leading-relaxed font-medium lg:max-w-[700px] lg:text-[20px]">
-                       {t("Tilga tayyorgarlik dasturlari talabalarga akademik tillarda muvaffaqiyat qozonishlari uchun keng qamrovli treninglarni taklif qiladi. Bu dasturlar o‘quvchilarni darslarda faol ishtirok etishga, uy vazifalarini o‘z vaqtida bajarishga, taklif etilayotgan o‘quv materiallaridan unumli foydalanishga undaydi. Dastur oxirida talabalar keyingi ta'limni davom ettirish uchun zarur bo'lgan til bilimiga ega bo'lishlari taxmin qilinadi.")}
+                        {t("Tilga tayyorgarlik dasturlari talabalarga akademik tillarda muvaffaqiyat qozonishlari uchun keng qamrovli treninglarni taklif qiladi. Bu dasturlar o‘quvchilarni darslarda faol ishtirok etishga, uy vazifalarini o‘z vaqtida bajarishga, taklif etilayotgan o‘quv materiallaridan unumli foydalanishga undaydi. Dastur oxirida talabalar keyingi ta'limni davom ettirish uchun zarur bo'lgan til bilimiga ega bo'lishlari taxmin qilinadi.")}
                     </h1>
                 </div>
                 <h1 data-aos="zoom-out-up"
-                    className="mt-4 leading-relaxed font-medium lg:max-w-[700px] lg:text-[20px]">{t("Turkiya xalqaro talabalarga turli tillarda ta’lim olish imkoniyatlarini taqdim etish orqali ta’lim sohasida global diqqat markaziga aylanishni maqsad qilgan. Turk tili asosiy ta'lim tili bo'lsa-da, universitetlar bir nechta til variantlari bilan global akademik tajribani taklif qilishadi.")}</h1>
-
+                    className="mt-4 leading-relaxed font-medium lg:max-w-[700px] lg:text-[20px]">{t("Turkiya xalqaro talabalarga turli tillarda ta’lim olish imkoniyatlarini taqdim etish orqali ta’lim sohasida global diqqat markaziga aylanishni maqsad qilgan. Turk tili asosiy ta'lim tili bo'lsa-da, universitetlar bir nechta til variantlari bilan global akademik tajribani taklif qilishadi.")}
+                </h1>
             </div>
         </>
     )
