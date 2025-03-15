@@ -3,6 +3,7 @@ import React, { useEffect, useState } from 'react'
 import { TypeAnimation } from 'react-type-animation'
 import nisantasibg from '../../images/nisantasibg.avif'
 import nisantasi2 from '../../images/nisantasi2.jpg'
+import { useTranslation } from 'react-i18next'
 
 const Nisantasi = () => {
     useEffect(() => {
@@ -34,7 +35,11 @@ const Nisantasi = () => {
     useEffect(() => {
         window.scrollTo(0, 0)
     }, [])
-
+     const { t, i18n } = useTranslation()
+        const ChangeLng = (e) => {
+            const selectedLanguage = e.target.value
+            i18n.changeLanguage(selectedLanguage)
+        }
     return (
         <>
             <div
@@ -46,20 +51,17 @@ const Nisantasi = () => {
                     backgroundPosition: "center"
                 }}>
                 <h1 className='main-text w-full max-w-[400px] text-xl md:max-w-[700px] md:text-3xl lg:max-w-[1000px] lg:text-4xl lg:px-5 lg:py-4 xl:text-5xl text-center text-white uppercase font-semibold px-4 py-3 rounded-2xl'>
-                    <TypeAnimation
-                        sequence={[
-                            "Istanbul Nişantaşı universiteti",
-                        ]}
-                        speed={50}
-                        cursor={false}
-                    />
+                  
+                   
+                           {t("Istanbul Nişantaşı universiteti")}
+                     
                 </h1>
                 <a
                     onClick={handleScroll}
                     data-aos='zoom-out-up'
                     href='#form'
                     className='text-white bg-[#004D91] w-[240px] h-12 rounded-xl flex items-center justify-center '>
-                    <h4 className='text-[18px] mr-2'>Hozir murojaat qiling</h4>
+                    <h4 className='text-[18px] mr-2'>{t("Hozir murojaat qiling")}</h4>
                     <i className="fa-solid fa-down-long text-[18px] mt-1.5"></i>
                 </a>
             </div>
@@ -74,7 +76,7 @@ const Nisantasi = () => {
                     className='flex flex-col items-center justify-center gap-2'>
                     <i class="fa-solid fa-graduation-cap text-3xl"></i>
                     <p>30000</p>
-                    <h2 className='mt-[-6px] text-center'>Talabalar soni</h2>
+                    <h2 className='mt-[-6px] text-center'>{t("Talabalar soni")}</h2>
                 </span>
 
                 <span
@@ -82,7 +84,7 @@ const Nisantasi = () => {
                     className='flex flex-col items-center justify-center gap-2'>
                     <i class="fa-solid fa-house text-3xl"></i>
                     <p>3</p>
-                    <h2 className='mt-[-6px] text-center'>Kampuslar soni</h2>
+                    <h2 className='mt-[-6px] text-center'>{t("Kampuslar soni")}</h2>
                 </span>
 
                 <span
@@ -90,7 +92,7 @@ const Nisantasi = () => {
                     className='flex flex-col items-center justify-center gap-2'>
                     <i class="fa-solid fa-building-columns text-3xl"></i>
                     <p>6</p>
-                    <h2 className='mt-[-6px] text-center'>Fakultet soni</h2>
+                    <h2 className='mt-[-6px] text-center'>{t("Fakultet soni")}</h2>
                 </span>
             </section>
 
@@ -102,17 +104,17 @@ const Nisantasi = () => {
                         className="bg-[#004D91] h-[2px] w-[100%] m-auto rounded-lg"></div>
                     <h1
                         data-aos="fade-right"
-                        className="text-2xl text-center md:text-3xl font-semibold uppercase">Istanbul Nişantaşı University – Zamonaviy Ta’lim Maskani</h1>
+                        className="text-2xl text-center md:text-3xl font-semibold uppercase">{t("Istanbul Nişantaşı University – Zamonaviy Ta’lim Maskani")}</h1>
                 </section>
 
                 <section className='flex flex-col gap-6 justify-between'>
                     <h1
                         data-aos="fade-right"
                         className="font-medium lg:max-w-[700px] lg:text-[20px]">
-                        Turkiyaning eng tez rivojlanayotgan xususiy oliy ta’lim muassasalaridan biri, zamonaviy ta’lim usullari, innovatsion infratuzilma va xalqaro talabalar uchun yaratilgan qulay sharoitlari bilan ajralib turadi. Universitet 2009-yilda tashkil etilgan bo‘lib, bugungi kunda <strong>biznes, muhandislik, dizayn va sog‘liqni saqlash</strong> sohalarida yetakchi universitetlar qatoriga kiradi.
+                        {t("Turkiyaning eng tez rivojlanayotgan xususiy oliy ta’lim muassasalaridan biri, zamonaviy ta’lim usullari, innovatsion infratuzilma va xalqaro talabalar uchun yaratilgan qulay sharoitlari bilan ajralib turadi. Universitet 2009-yilda tashkil etilgan bo‘lib, bugungi kunda")} <strong>{t("biznes, muhandislik, dizayn va sog‘liqni saqlash")}</strong> {t("sohalarida yetakchi universitetlar qatoriga kiradi.")}
                         <br />
                         <br />
-                        Nişantaşı Universitetining asosiy maqsadi – talabalarni kelajak kasblariga tayyorlash, ularga raqobatbardosh bilim va amaliy ko‘nikmalar berishdir. Universitet Istanbulning markaziy hududlaridan birida joylashgan bo‘lib, talabalar uchun akademik va shaxsiy rivojlanish uchun keng imkoniyatlar yaratadi.
+                        {t("Nişantaşı Universitetining asosiy maqsadi – talabalarni kelajak kasblariga tayyorlash, ularga raqobatbardosh bilim va amaliy ko‘nikmalar berishdir. Universitet Istanbulning markaziy hududlaridan birida joylashgan bo‘lib, talabalar uchun akademik va shaxsiy rivojlanish uchun keng imkoniyatlar yaratadi.")}
                     </h1>
                     <img
                         data-aos="zoom-in"
@@ -127,44 +129,44 @@ const Nisantasi = () => {
                         className="bg-[#004D91] h-[2px] w-[100%] m-auto rounded-lg"></div>
                     <h1
                         data-aos="fade-right"
-                        className="text-2xl text-center md:text-3xl font-semibold uppercase">Nima Uchun Aynan Nişantaşı Universiteti?</h1>
+                        className="text-2xl text-center md:text-3xl font-semibold uppercase">{t("Nima Uchun Aynan Nişantaşı Universiteti?")}</h1>
                 </section>
 
                 <section className='flex flex-col gap-2 justify-between mt-4'>
                     <h1
                         data-aos="fade-right"
                         className="leading-relaxed font-medium lg:max-w-[700px] lg:text-[20px]">
-                        <strong>Zamonaviy va innovatsion ta’lim:</strong>
+                        <strong>{t("Zamonaviy va innovatsion ta’lim:")}</strong>
                         <br />
-                        – Universitet o‘zining ilg‘or pedagogik yondashuvi va amaliy ta’lim usullari bilan ajralib turadi.
+                        {t("– Universitet o‘zining ilg‘or pedagogik yondashuvi va amaliy ta’lim usullari bilan ajralib turadi.")}
                     </h1>
                     <h1
                         data-aos="fade-right"
                         className="leading-relaxed font-medium lg:max-w-[700px] lg:text-[20px]">
-                        <strong>Istanbulning markazida joylashgan:</strong>
+                        <strong>{t("Istanbulning markazida joylashgan:")}</strong>
                         <br />
-                        – Universitet shahar markazida bo‘lib, talabalar uchun barcha qulayliklarni taqdim etadi.
+                        {t("– Universitet shahar markazida bo‘lib, talabalar uchun barcha qulayliklarni taqdim etadi.")}
                     </h1>
                     <h1
                         data-aos="fade-right"
                         className="leading-relaxed font-medium lg:max-w-[700px] lg:text-[20px]">
-                        <strong>Amaliyot va ishga joylashish imkoniyati yuqori:</strong>
+                        <strong>{t("Amaliyot va ishga joylashish imkoniyati yuqori:")}</strong>
                         <br />
-                        – Universitet ko‘plab yirik kompaniyalar bilan hamkorlik qiladi.
+                        {t("– Universitet ko‘plab yirik kompaniyalar bilan hamkorlik qiladi.")}
                     </h1>
                     <h1
                         data-aos="fade-right"
                         className="leading-relaxed font-medium lg:max-w-[700px] lg:text-[20px]">
-                        <strong>Startup va tadbirkorlik qo‘llab-quvvatlanadi:</strong>
+                        <strong>{t("Startup va tadbirkorlik qo‘llab-quvvatlanadi:")}</strong>
                         <br />
-                        – Talabalar o‘z biznes g‘oyalarini universitet qoshidagi inkubator markazlarida rivojlantirishlari mumkin.
+                        {t("– Talabalar o‘z biznes g‘oyalarini universitet qoshidagi inkubator markazlarida rivojlantirishlari mumkin.")}
                     </h1>
                     <h1
                         data-aos="fade-right"
                         className="leading-relaxed font-medium lg:max-w-[700px] lg:text-[20px]">
-                        <strong>Xalqaro almashinuv dasturlari:</strong>
+                        <strong>{t("Xalqaro almashinuv dasturlari:")}</strong>
                         <br />
-                        – Universitet Yevropa va AQShdagi nufuzli universitetlar bilan hamkorlik qiladi.
+                        {t("– Universitet Yevropa va AQShdagi nufuzli universitetlar bilan hamkorlik qiladi.")}
                     </h1>
                 </section>
 
@@ -174,7 +176,7 @@ const Nisantasi = () => {
                         className="bg-[#004D91] h-[2px] w-[100%] m-auto rounded-lg"></div>
                     <h1
                         data-aos="fade-right"
-                        className="text-2xl text-center md:text-3xl font-semibold uppercase">Fakultetlar va Yo‘nalishlar</h1>
+                        className="text-2xl text-center md:text-3xl font-semibold uppercase">{t("Fakultetlar va Yo‘nalishlar")}</h1>
                 </section>
 
                 <section className='flex flex-col gap-6 items-center justify-between'>
@@ -184,7 +186,7 @@ const Nisantasi = () => {
                         className="mt-4 leading-relaxed flex flex-col gap-3 font-medium lg:max-w-[700px] lg:text-[20px]">
 
                         <h1 className='font-bold text-center'>
-                            Nişantaşı Universiteti quyidagi sohalar bo‘yicha ta’lim dasturlarini taklif etadi:
+                            {t("Nişantaşı Universiteti quyidagi sohalar bo‘yicha ta’lim dasturlarini taklif etadi:")}
                         </h1>
 
                         <span className='specify w-full h-full flex flex-col gap-4 border-2 border-[#004D91] rounded-3xl p-4 mb-3'>
@@ -193,100 +195,100 @@ const Nisantasi = () => {
 
                                 <span className='mt-[-8px] flex flex-col'>
                                     <h1 className='font-bold'>
-                                        1. Muhandislik va Arxitektura Fakulteti
+                                        {t("1. Muhandislik va Arxitektura Fakulteti")}
                                     </h1>
                                     <h1>
-                                        • Kompyuter muhandisligi
+                                        {t("• Kompyuter muhandisligi")}
                                     </h1>
                                     <h1>
-                                        • Sun’iy intellekt va ma’lumotlar fanlari
+                                        {t("• Sun’iy intellekt va ma’lumotlar fanlari")}
                                     </h1>
                                     <h1>
-                                        • Mechatronika muhandisligi
+                                        {t("• Mechatronika muhandisligi")}
                                     </h1>
                                     <h1>
-                                        • Qurilish muhandisligi
+                                        {t("• Qurilish muhandisligi")}
                                     </h1>
                                     <h1>
-                                        • Arxitektura
+                                        {t("• Arxitektura")}
                                     </h1>
                                 </span>
 
                                 <span className='mt-[-8px] flex flex-col'>
                                     <h1 className='font-bold'>
-                                        2. Biznes va Menejment Fakulteti
+                                        {t("2. Biznes va Menejment Fakulteti")}
                                     </h1>
                                     <h1>
-                                        • Xalqaro biznes boshqaruvi
+                                        {t("• Xalqaro biznes boshqaruvi")}
                                     </h1>
                                     <h1>
-                                        • Bank ishi va moliya
+                                        {t("• Bank ishi va moliya")}
                                     </h1>
                                     <h1>
-                                        • Tadbirkorlik va innovatsiya
+                                        {t("• Tadbirkorlik va innovatsiya")}
                                     </h1>
                                     <h1>
-                                        • Marketing va raqamli biznes
+                                        {t("• Marketing va raqamli biznes")}
                                     </h1>
                                 </span>
 
                                 <span className='mt-[-8px] flex flex-col'>
                                     <h1 className='font-bold'>
-                                        3. Ijtimoiy Fanlar Fakulteti
+                                        {t("3. Ijtimoiy Fanlar Fakulteti")}
                                     </h1>
                                     <h1>
-                                        • Xalqaro munosabatlar
+                                        {t("• Xalqaro munosabatlar")}
                                     </h1>
                                     <h1>
-                                        • Psixologiya
+                                        {t("• Psixologiya")}
                                     </h1>
                                     <h1>
-                                        • Sotsiologiya
+                                        {t("• Sotsiologiya")}
                                     </h1>
                                     <h1>
-                                        • Media va kommunikatsiya
+                                        {t("• Media va kommunikatsiya")}
                                     </h1>
                                 </span>
 
                                 <span className='mt-[-8px] flex flex-col'>
                                     <h1 className='font-bold'>
-                                        4. San’at va Dizayn Fakulteti
+                                        {t("4. San’at va Dizayn Fakulteti")}
                                     </h1>
                                     <h1>
-                                        • Ichki dizayn
+                                        {t("• Ichki dizayn")}
                                     </h1>
                                     <h1>
-                                        • Moda dizayni
+                                        {t("• Moda dizayni")}
                                     </h1>
                                     <h1>
-                                        • Grafika va vizual san’at
+                                        {t("• Grafika va vizual san’at")}
                                     </h1>
                                 </span>
 
                                 <span className='mt-[-8px] flex flex-col'>
                                     <h1 className='font-bold'>
-                                        5. Sog‘liqni Saqlash Fakulteti
+                                        {t("5. Sog‘liqni Saqlash Fakulteti")}
                                     </h1>
                                     <h1>
-                                        • Hamshiralik ishi
+                                        {t("• Hamshiralik ishi")}
                                     </h1>
                                     <h1>
-                                        • Fizioterapiya va reabilitatsiya
+                                        {t("• Fizioterapiya va reabilitatsiya")}
                                     </h1>
                                     <h1>
-                                        • Tibbiyot texnologiyalari
+                                        {t("• Tibbiyot texnologiyalari")}
                                     </h1>
                                 </span>
 
                                 <span className='mt-[-8px] flex flex-col'>
                                     <h1 className='font-bold'>
-                                        6. Aviatsiya va Logistika Fakulteti
+                                        {t("6. Aviatsiya va Logistika Fakulteti")}
                                     </h1>
                                     <h1>
-                                        • Havo transporti menejmenti
+                                        {t("• Havo transporti menejmenti")}
                                     </h1>
                                     <h1>
-                                        • Xalqaro logistika va ta’minot zanjiri
+                                        {t("• Xalqaro logistika va ta’minot zanjiri")}
                                     </h1>
                                 </span>
 
@@ -304,39 +306,39 @@ const Nisantasi = () => {
                         className="bg-[#004D91] h-[2px] w-[100%] m-auto rounded-lg"></div>
                     <h1
                         data-aos="fade-right"
-                        className="text-2xl text-center md:text-3xl font-semibold uppercase">Kampus Hayoti va Talabalar Uchun Sharoitlar:</h1>
+                        className="text-2xl text-center md:text-3xl font-semibold uppercase">{t("Kampus Hayoti va Talabalar Uchun Sharoitlar:")}</h1>
                 </section>
 
                 <section className='flex flex-col gap-4 justify-between'>
                     <h1
                         data-aos="fade-right"
                         className="font-medium lg:max-w-[700px] lg:text-[20px] mt-4">
-                        <strong>Ultra-zamonaviy kampuslar</strong> – Universitetning Istanbuldagi eng ilg‘or texnologiyalarga ega kampuslaridan biri.
+                        <strong>{t("Ultra-zamonaviy kampuslar")}</strong> {t("– Universitetning Istanbuldagi eng ilg‘or texnologiyalarga ega kampuslaridan biri.")}
                     </h1>
                     <h1
                         data-aos="fade-right"
                         className="font-medium lg:max-w-[700px] lg:text-[20px]">
-                        <strong>Katta sport inshootlari</strong> – Sport zallari, ochiq stadionlar va fitnes markazlari mavjud.
+                        <strong>{t("Katta sport inshootlari")}</strong> {t("– Sport zallari, ochiq stadionlar va fitnes markazlari mavjud.")}
                     </h1>
                     <h1
                         data-aos="fade-right"
                         className="font-medium lg:max-w-[700px] lg:text-[20px]">
-                        <strong>O‘quv va ilmiy markazlar</strong> – Talabalar eng zamonaviy laboratoriyalarda o‘qishadi.
+                        <strong>{t("O‘quv va ilmiy markazlar")}</strong> {t("– Talabalar eng zamonaviy laboratoriyalarda o‘qishadi.")}
                     </h1>
                     <h1
                         data-aos="fade-right"
                         className="font-medium lg:max-w-[700px] lg:text-[20px]">
-                        <strong>Kutubxona va tadqiqot markazlari</strong> – 24/7 ishlaydigan zamonaviy kutubxona va ilmiy resurslar.
+                        <strong>{t("Kutubxona va tadqiqot markazlari")}</strong> {t("– 24/7 ishlaydigan zamonaviy kutubxona va ilmiy resurslar.")}
                     </h1>
                     <h1
                         data-aos="fade-right"
                         className="font-medium lg:max-w-[700px] lg:text-[20px]">
-                        <strong>Startup va innovatsion markazlar</strong> – Talabalar o‘z biznes g‘oyalarini boshlash uchun imkoniyatga ega.
+                        <strong>{t("Startup va innovatsion markazlar")}</strong> {t("– Talabalar o‘z biznes g‘oyalarini boshlash uchun imkoniyatga ega.")}
                     </h1>
                     <h1
                         data-aos="fade-right"
                         className="font-medium lg:max-w-[700px] lg:text-[20px]">
-                        <strong>Talaba klublari va madaniy tadbirlar</strong> – Talabalar teatr, kino, sport va ilmiy klublarda ishtirok etishlari mumkin.
+                        <strong>{t("Talaba klublari va madaniy tadbirlar")}</strong> {t("– Talabalar teatr, kino, sport va ilmiy klublarda ishtirok etishlari mumkin.")}
                     </h1>
                 </section>
 
@@ -344,23 +346,23 @@ const Nisantasi = () => {
                     data-aos="zoom-in"
                     className='specify2 w-full h-full flex flex-col gap-4 border-2 border-[#004D91] rounded-3xl mt-4 p-4 mb-3'>
                     <h1 className='font-bold text-center'>
-                        E’tibor bering! Future Study orqali siz:
+                        {t("E’tibor bering! Future Study orqali siz:")}
                     </h1>
 
                     <span className='flex flex-col gap-5'>
 
                         <span className='mt-[-8px] font-medium'>
                             <h1 className='mb-3'>
-                                Hech qanday imtihon topshirmasdan o‘qishga kira olasiz!
+                                {t("Hech qanday imtihon topshirmasdan o‘qishga kira olasiz!")}
                             </h1>
                             <h1>
-                                Hech qanday til sertifikatlari talab qilinmaydi! (IELTS yoki TOEFL kerak emas)
+                                {t("Hech qanday til sertifikatlari talab qilinmaydi! (IELTS yoki TOEFL kerak emas)")}
                             </h1>
                             <h1>
-                                Firma to‘lovisiz qabul qilinasiz!
+                                {t("Firma to‘lovisiz qabul qilinasiz!")}
                             </h1>
                             <h1>
-                                Va eng muhimi – 71% chegirmani qo‘lga kiritish imkoniyatiga egasiz!
+                                {t("Va eng muhimi – 71% chegirmani qo‘lga kiritish imkoniyatiga egasiz!")}
                             </h1>
                         </span>
 
@@ -373,4 +375,7 @@ const Nisantasi = () => {
     )
 }
 
+
 export default Nisantasi
+
+

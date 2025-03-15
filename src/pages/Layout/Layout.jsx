@@ -190,7 +190,7 @@ const Layout = () => {
                                 }}>
                                     <i className="fa-solid fa-universal-access"></i>
                                     <p>
-                                        Dasturlar
+                                        {t("Dasturlar")}
                                     </p></Link>
                                 {pathname === '/programs' && (
                                     <div className={`underline absolute left-3 sm:left-0 bottom-[-6px] max-sm:left-0 ${isOpen ? 'w-[160px]' : 'w-0'} ${isOpen ? 'sm:w-[200px]' : 'w-0'} h-[2px] bg-[#004D91] transition-all duration-[1000ms] ease-in-out`}></div>
@@ -203,7 +203,7 @@ const Layout = () => {
                                 }}>
                                     <i className="fa-solid fa-building-columns"></i>
                                     <p>
-                                        Universitetlar
+                                        {t("Universitetlar")}
                                     </p>
                                 </Link>
                                 {pathname === '/universities' && (
@@ -256,7 +256,7 @@ const Layout = () => {
                                 }}>
                                     <i className="fa-solid fa-plane rotate-[330deg]"></i>
                                     <p>
-                                        Transfer xizmati
+                                        {t("Transfer xizmati")}
                                     </p>
                                 </Link>
                                 {pathname === '/services' && (
@@ -270,7 +270,7 @@ const Layout = () => {
                                 }}>
                                     <i className="fa-solid fa-earth-europe"></i>
                                     <p>
-                                        Turkiya
+                                        {t("Turkiya")}
                                     </p>
                                 </Link>
                                 {pathname === '/turkey' && (
@@ -323,13 +323,13 @@ const Layout = () => {
                         data-aos="zoom-in"
                         className="contacts w-full max-w-[300px] h-auto flex flex-col gap-5 md:items-start">
                         <div className="max-w-[225px] w-full flex flex-col gap-3 text-start max-md:m-auto">
-                            <h1 className="text-lg font-medium uppercase sm:text-xl">Kontakt:</h1>
+                            <h1 className="text-lg font-medium uppercase sm:text-xl">{t("Kontakt:")}</h1>
                             <div className="flex flex-col items-start gap-1">
                                 <p className="text-lg font-extralight">Tel:</p>
                                 <a className="text-lg font-extralight text-white no-underline" href="tel:+998771445777">+998 77 144 57 77</a>
                                 <a className="text-lg font-extralight text-white no-underline" href="tel:+998772053777">+998 77 205 37 77</a>
                             </div>
-                            <h1 className="text-lg font-medium uppercase sm:text-xl">Ijtimoiy tarmoqlar:</h1>
+                            <h1 className="text-lg font-medium uppercase sm:text-xl">{t("Ijtimoiy tarmoqlar:")}</h1>
                             <span className='flex flex-row gap-6 mb-2'>
                                 <a
                                     target='_blank'
@@ -353,7 +353,7 @@ const Layout = () => {
                             <a
                                 target='_blank'
                                 href="https://maps.app.goo.gl/3sCRdFikaroadQyq5?g_st=com.google.maps.preview.copy" className="flex items-center gap-3 social-icon">
-                                <i className="fa-solid fa-location-dot text-5xl"></i> Mustaqillik 88A, Darhan Business center
+                                <i className="fa-solid fa-location-dot text-5xl"></i> {t("Mustaqillik 88A, Darhan Business center")}
                             </a>
                         </div>
                     </section>
@@ -362,20 +362,20 @@ const Layout = () => {
                         id='form'
                         data-aos="zoom-in"
                         className="form max-w-[300px] w-full flex flex-col gap-3 items-center md:items-start">
-                        <h1 className="text-lg font-medium text-center uppercase sm:text-xl">Bepul kosultatsiya olish uchun ma'lumotlaringizni qoldiring!</h1>
+                        <h1 className="text-lg font-medium text-center uppercase sm:text-xl">{t("Bepul kosultatsiya olish uchun ma'lumotlaringizni qoldiring!")}</h1>
                         <form
                             onSubmit={SendMessage}
                             id='myForm'
                             className="w-full max-w-[300px] flex flex-col gap-3">
-                            <p className='text-xl font-light'>Ismingizni kiriting:</p>
+                            <p className='text-xl font-light'>{t("Ismingizni kiriting:")}</p>
                             <input
                                 id='name'
                                 required
                                 type="text"
                                 minLength={3}
-                                placeholder="Ismingiz"
+                                placeholder={t("Ismingiz")}
                                 className="w-full bg-white p-2 text-black outline-none rounded-md" />
-                            <p className='text-xl font-light'>Telefon raqamingizni kiriting:</p>
+                            <p className='text-xl font-light'>{t("Telefon raqamingizni kiriting:")}</p>
                             <input
                                 id='telephone'
                                 required
@@ -383,13 +383,13 @@ const Layout = () => {
                                 value={phone}
                                 onChange={handleChange}
                                 maxLength={17}
-                                placeholder="Telefon raqamingiz"
+                                placeholder={t("Telefon raqamingiz")}
                                 className="w-full bg-white p-2 text-black outline-none rounded-md mb-1" />
                             <button
                                 disabled={loading}
                                 type="submit"
                                 className={`w-full h-10 rounded-lg font-medium ${loading ? "bg-gray-400 cursor-not-allowed" : "bg-[#1894b3] text-white"}`}>
-                                {loading ? 'Sending...' : 'Send'}
+                            {loading ? t('Sending...') : t('Send')}
                             </button>
                         </form>
                     </section>
