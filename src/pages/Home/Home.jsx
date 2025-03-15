@@ -81,7 +81,7 @@ const Home = () => {
                         className="bg-[#004D91] h-[2px] max-w-[170px] md:max-w-[220px] md:h-[3px] w-full rounded-lg"></div>
                     <h1
                         data-aos="fade-right"
-                        className="text-2xl md:text-3xl font-semibold uppercase mt-2">{t("Biz Haqimizda")}</h1>
+                        className="text-2xl md:text-3xl font-semibold uppercase mt-2">{t("Biz haqimizda")}</h1>
                 </section>
 
                 <div className='flex max-[550px]:flex-col gap-6 flex-row justify-between'>
