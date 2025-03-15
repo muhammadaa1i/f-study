@@ -1,11 +1,9 @@
 import React, { useEffect, useState } from 'react'
 import whytr from '../../images/whytr.jpeg'
-import { TypeAnimation } from 'react-type-animation'
 import Aos from 'aos'
 import { useTranslation } from 'react-i18next'
 
 const Turkey = () => {
-
   useEffect(() => {
     Aos.init({ duration: 800 })
   }, [])
@@ -29,13 +27,9 @@ const Turkey = () => {
 
       window.scrollTo({ top: y, behavior: "smooth" });
     }
-  };
-  const { t, i18n } = useTranslation()
-  const ChangeLng = (e) => {
-    const selectedLanguage = e.target.value
-    i18n.changeLanguage(selectedLanguage)
   }
 
+  const { t, i18n } = useTranslation()
 
   return (
     <>
