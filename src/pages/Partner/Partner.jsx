@@ -167,7 +167,7 @@ const Partner = () => {
                         <p className='text-xl font-normal'>{t("Agentlikning aloqa raqami")} :</p>
                         <input id='telephone' required type="tel" value={phone} onChange={handleChange} maxLength={17} placeholder={t("Iltimos, telefoningizni aniqligini diqqat bilan tekshiring")} className="w-full bg-white p-2 text-black border-2 border-[#004D91] outline-none rounded-md mb-1" />
 
-                        <p className='text-xl font-normal'>{t("Agentlik tashkil etilgan sana:")} :</p>
+                        <p className='text-xl font-normal'>{t("Agentlik tashkil etilgan sana")} :</p>
                         <input id='date' required type="date" onChange={handleChange} className="w-full bg-white p-2 text-black border-2 border-[#004D91] outline-none rounded-md mb-1" />
 
                         <p className='text-xl font-normal'>{t("Agentlik sayti")} :</p>
@@ -183,7 +183,7 @@ const Partner = () => {
                         <textarea id='location' required rows={6} onChange={handleChange} minLength={3} placeholder={t("Agentlikning aniq manzili")} className="w-full bg-white p-2 text-black border-2 border-[#004D91] outline-none rounded-md mb-1" />
 
                         <button disabled={loading} type="submit" className={`w-full h-10 rounded-lg font-medium ${loading ? "bg-gray-400 cursor-not-allowed" : "bg-[#1894b3] text-white"}`}>
-                            {loading ? 'Sending...' : 'Send'}
+                            {loading ? t('Sending...') : t('Send')}
                         </button>
                     </form>
 

@@ -42,7 +42,7 @@ const CustomAccordion = () => {
                 },
                 {
                     question: t("Malumot xatini qanday olishim mumkin?"),
-                    answer: t("Ma'lumotnomalar o'qituvchilar, akademiklar yoki ish beruvchilar tomonidan yozilishi mumkin. Xat yozish uchun maxsus shakl bo'lishi mumkin, siz ushbu tafsilotlarga e'tibor berishingiz kerak.")
+                    answer: t("Malumotnomalar o'qituvchilar, akademiklar yoki ish beruvchilar tomonidan yozilishi mumkin. Xat yozish uchun maxsus shakl bo'lishi mumkin, siz ushbu tafsilotlarga e'tibor berishingiz kerak.")
                 },
                 {
                     question: t("Qanday qilib arizamni to'ldirishim mumkin?"),
