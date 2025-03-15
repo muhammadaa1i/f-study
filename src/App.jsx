@@ -21,7 +21,7 @@ import Istinye from './pages/Universities/Istinye'
 import Ozyegin from './pages/Universities/Ozyegin'
 import Fatih from './pages/Universities/Fatih'
 import Questions from './pages/Questions/Questions'
-import Partner from './pages/Partner/PArtner'
+import Partner from './pages/Partner/Partner'
 
 const App = () => {
   return (
