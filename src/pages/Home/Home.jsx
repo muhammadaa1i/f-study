@@ -154,7 +154,7 @@ const Home = () => {
                             <h1
                                 data-aos="fade-right"
                                 className='leading-relaxed font-medium lg:text-[20px] lg:max-w-[500px]'>
-                               {t(" Ingliz yoki turk tilini mukammal bilmasangiz ham, siz uchun til kurslari taklif qilamiz.")}
+                               {t("Ingliz yoki turk tilini mukammal bilmasangiz ham, siz uchun til kurslari taklif qilamiz.")}
                             </h1>
                         </span>
                         <span>
@@ -164,7 +164,7 @@ const Home = () => {
                             <h1
                                 data-aos="fade-right"
                                 className='leading-relaxed font-medium lg:text-[20px]'>
-                               {t(" Universitet tanlash, stipendiyalar, turar joy, viza va boshqa xizmatlarni taqdim etamiz.")}
+                               {t("Universitet tanlash, stipendiyalar, turar joy, viza va boshqa xizmatlarni taqdim etamiz.")}
                             </h1>
                         </span>
                     </div>
@@ -252,7 +252,7 @@ const Home = () => {
                     <h1
                         data-aos="zoom-in"
                         className='text-4xl font-medium max-[450px]:text-3xl'>
-                       {t(" Sizni dunyo bilan bog'laydi!")}
+                       {t("Sizni dunyo bilan bog'laydi!")}
                     </h1>
                     <div
                         ref={ref}
