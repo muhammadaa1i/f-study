@@ -352,7 +352,7 @@ const Layout = () => {
                         <div className="max-w-[225px] w-full flex flex-col gap-3 text-start max-md:m-auto">
                             <h1 className="text-lg font-medium uppercase sm:text-xl">{t("Kontakt:")}</h1>
                             <div className="flex flex-col items-start gap-1">
-                                <p className="text-lg font-extralight">Tel:</p>
+                                <p className="text-lg font-extralight">{t("Tel")}:</p>
                                 <a className="text-lg font-extralight text-white no-underline" href="tel:+998771445777">+998 77 144 57 77</a>
                                 <a className="text-lg font-extralight text-white no-underline" href="tel:+998772053777">+998 77 205 37 77</a>
                             </div>
