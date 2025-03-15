@@ -389,7 +389,7 @@ const Layout = () => {
                                 disabled={loading}
                                 type="submit"
                                 className={`w-full h-10 rounded-lg font-medium ${loading ? "bg-gray-400 cursor-not-allowed" : "bg-[#1894b3] text-white"}`}>
-                                {loading ? 'Sending...' : 'Send'}
+                            {loading ? t('Sending...') : t('Send')}
                             </button>
                         </form>
                     </section>
