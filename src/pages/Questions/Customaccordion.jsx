@@ -2,7 +2,7 @@ import React, { useState } from 'react'
 import { useTranslation } from 'react-i18next'
 
 const CustomAccordion = () => {
-    const { t } = useTranslation()
+    const { t, i18n } = useTranslation()
     const [openIndex, setOpenIndex] = useState(null)
 
     const toggleAccordion = (index) => {
