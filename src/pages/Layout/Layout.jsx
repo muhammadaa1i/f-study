@@ -11,6 +11,10 @@ import axios from 'axios'
 import { toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import { useTranslation } from 'react-i18next'
+import uzb from '../../images/uzbflag.png'
+import rus from '../../images/russianflag.png'
+import eng from '../../images/gbflag.png'
+import tur from '../../images/turkflag.png'
 
 const Layout = () => {
     const [isOpen, setIsOpen] = useState(false);
@@ -95,11 +99,11 @@ const Layout = () => {
     }
 
     const { t, i18n } = useTranslation()
-    const ChangeLng = (e) => {
-        const selectedLanguage = e.target.value
+    const ChangeLng = (selectedLanguage) => {
         i18n.changeLanguage(selectedLanguage)
+        localStorage.setItem('i18nextLng', selectedLanguage)
     }
-    const language = localStorage.getItem('i18nextLng')
+    const language = localStorage.getItem('i18nextLng') || 'uz'
 
     return (
         <>
@@ -143,31 +147,50 @@ const Layout = () => {
                             <li>
                                 <Link className="no-underline text-[18px] font-normal" to="/turkey">{t('Turkiya')}</Link>
                             </li>
-                            <select
-                                onChange={ChangeLng}
-                                value={language}
-                                className='languasges outline-none border-2 text-white p-1 bg-[#004D91] '>
-                                <option value="uz">UZB</option>
-                                <option value="ru">RUS</option>
-                                <option value="en">ENG</option>
-                                <option value="tu">TUR</option>
-                            </select>
                         </ul>
                     </section>
 
                     <section className={`mobile-menu fixed top-0 right-0 h-full w-[50%] max-[500px]:w-[60%] max-[400px]:w-[75%] bg-gray-50 shadow-lg transform md:hidden ${isOpen ? "translate-x-0" : "translate-x-full"} z-50 transition-transform duration-500 ease-in-out `}>
-                        <div className="w-auto h-auto flex flex-row justify-between items-center p-3">
-                            <button onClick={() => setIsOpen(false)} className="fa-solid fa-x text-2xl max-sm:text-lg"></button>
-                            <select
-                                onChange={ChangeLng}
-                                value={language}
-                                className='languasges outline-none border-2 text-white p-1 bg-[#004D91] '>
-                                <option value="uz">UZB</option>
-                                <option value="ru">RUS</option>
-                                <option value="en">ENG</option>
-                                <option value="tu">TUR</option>
-                            </select>
+                        <div className="w-auto h-auto flex flex-row justify-between items-center px-3 py-4">
+                            <button onClick={() => setIsOpen(false)} className="fa-solid fa-x text-2xl max-sm:text-xl"></button>
                         </div>
+                        <section className='languages w-[95%] mx-auto flex flex-row justify-evenly border-2 border-[#004D91] rounded-xl'>
+                            <button
+                                onClick={() => ChangeLng('uz')}
+                                className='outline-none py-2'>
+                                <img
+                                    className='w-10 h-8 rounded-[6px]'
+                                    src={uzb}
+                                    alt="uzbekistan flag" />
+                            </button>
+                            <div className='w-[2px] h-auto bg-[#004D91]'></div>
+                            <button
+                                onClick={() => ChangeLng('ru')}
+                                className='outline-none py-2'>
+                                <img
+                                    className='w-10 h-8 rounded-[6px]'
+                                    src={rus}
+                                    alt="russian flag" />
+                            </button>
+                            <div className='w-[2px] h-auto bg-[#004D91]'></div>
+                            <button
+                                onClick={() => ChangeLng('en')}
+                                className='outline-none py-2'>
+                                <img
+                                    className='w-10 h-8 rounded-[6px]'
+                                    src={eng}
+                                    alt="russian flag" />
+                            </button>
+                            <div className='w-[2px] h-auto bg-[#004D91]'></div>
+                            <button
+                                onClick={() => ChangeLng('tu')}
+                                className='outline-none py-2'>
+                                <img
+                                    className='w-10 h-8 rounded-[6px]'
+                                    src={tur}
+                                    alt="russian flag" />
+                            </button>
+                        </section>
                         <ul className="flex flex-col pr-2 gap-4 text-2xl mt-8 ml-8 max-w-[500px]:ml-8 max-sm:text-lg text-start">
                             <li className={`relative flex flex-row gap-2 items-center`}>
                                 <Link className="text-[#004D91] no-underline flex flex-row items-center gap-1" to="/" onClick={() => {
@@ -416,7 +439,7 @@ const Layout = () => {
                                 disabled={loading}
                                 type="submit"
                                 className={`w-full h-10 rounded-lg font-medium ${loading ? "bg-gray-400 cursor-not-allowed" : "bg-[#1894b3] text-white"}`}>
-                            {loading ? t('Sending...') : t('Send')}
+                                {loading ? t('Sending...') : t('Send')}
                             </button>
                         </form>
                     </section>

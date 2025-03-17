@@ -88,7 +88,7 @@ const Home = () => {
                     <h1
                         data-aos="fade-right"
                         className="mt-4 leading-relaxed font-medium lg:max-w-[700px] lg:text-[20px]">
-                      {t("Future Study Education Consulting – bu xalqaro ta’lim sohasida yetakchi kompaniyalardan biri bo‘lib, yoshlar uchun dunyoning eng nufuzli universitetlarida o‘qish imkoniyatlarini yaratishga ixtisoslashgan. Biz Turkiya va boshqa mamlakatlardagi top universitetlarga kirish jarayonida abituriyentlarga to‘liq qo‘llab-quvvatlash xizmatlarini taqdim etamiz.")}
+                      {t("Future Study Education Consulting – 2021-yil Alisher Saidov tomonidan tashkil qilingan. Xalqaro ta’lim sohasida yetakchi kompaniyalardan biri, yoshlar uchun dunyoning eng nufuzli universitetlarida o‘qish imkoniyatlarini yaratishga ixtisoslashgan. Biz Turkiya va boshqa mamlakatlardagi top universitetlarga kirish jarayonida abituriyentlarga to‘liq qo‘llab-quvvatlash xizmatlarini taqdim etamiz.")}
                     </h1>
                     <div
                         data-aos='zoom-in'
@@ -96,10 +96,8 @@ const Home = () => {
                         <iframe
                             className="m-auto max-[550px]:m-auto h-[390px] w-[220px] rounded-2xl shadow-2xl sm:mt-[-30px]"
                             src="https://www.youtube.com/embed/3caz98HUnEU"
-                            frameBorder="0"
                             allowFullScreen
                         ></iframe>
-
                     </div>
                 </div>
 
