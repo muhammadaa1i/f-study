@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react'
-import logo from '../../images/nobglogo.jpg'
+import logo from '../../images/logof.png'
 import { Link, Outlet, useLocation } from 'react-router-dom'
 import Aos from 'aos'
 import 'aos/dist/aos.css'
@@ -117,11 +117,15 @@ const Layout = () => {
                         backgroundPosition: "center",
                         backgroundAttachment: "scroll"
                     }}
-                    className='nav w-[100vw] z-30 h-[60px] bg-white flex flex-row items-center justify-between fixed top-0 left-0 shadow-2xl overflow-hidden '>
+                    className='nav w-[100vw] z-30 h-[60px] bg-white flex flex-row items-center justify-between fixed top-0 left-0 shadow-2xl overflow-hidden'>
 
                     <a href="/">
-                        <img className='h-[9vh] logo max-[450px]:h-[7vh]' src={logo} alt="logo of company" />
+                        <img
+                            loading='lazy'
+                            className='logo w-[90px] h-[90px] ml-[-5px] min-[400px]:w-[100px] min-[400px]:h-[100px] min-[500px]:w-[110px] min-[500px]:h-[110px]'
+                            src={logo} alt="logo of company" />
                     </a>
+
                     <div className='flex flex-row items-center justify-between gap-4'>
                         <button
                             onClick={() => setIsOpen(!isOpen)}
